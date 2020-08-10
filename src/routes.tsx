@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+//Components
+import PrivateRoute from './components/PrivateRoute';
 //Pages
 import Landing from './pages/Landing';
 import User from './pages/User';
@@ -17,12 +18,12 @@ const Routes: React.FC = () => {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route path="/user" component={User}/>
+        <PrivateRoute path="/user" component={User}/>
         <Route path="/register/user" component={RegisterUser}/>
-        <Route path="/company" component={Company} />
+        <PrivateRoute path="/company" component={Company} />
         <Route path="/register/company" component={RegisterCompany} />
         <Route path="/event/:id" component={Event} />
-        <Route path="/register/event" component={RegisterEvent} />
+        <PrivateRoute path="/register/event" component={RegisterEvent} />
         <Route path="/login" component={Login} />
         <Route path="*" component={NotFound}/>
       </Switch>
