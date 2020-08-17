@@ -1,10 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import './font/stylesheet.css';
 
 const colors = {
   primary: '#1ABC9C',
   secondary: '#16A085',
-  third: '#4D4D4D',
-  background: '#EEEFEF'
+  third: '#333333',
+  gray: '#828282',
+  white: '#EEEFEF'
 }
 
 export default createGlobalStyle`    
@@ -12,7 +14,8 @@ export default createGlobalStyle`
     --primary-color: ${colors.primary};
     --secondary-color: ${colors.secondary};
     --third-color: ${colors.third};
-    --background: ${colors.background};
+    --gray-text: ${colors.gray};
+    --background: ${colors.white};
   }
 
   * {
@@ -20,7 +23,7 @@ export default createGlobalStyle`
     padding: 0;
   }
     
-  *.
+  *,
   *::before,
   *::after {
     box-sizing: inherit;
@@ -59,6 +62,7 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.4;
+    overflow-x: hidden;
   }
 
   img {
