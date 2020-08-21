@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface Props {
   url: string
 }
 
-export const ImageCardContainer = styled.a<Props>`
+export const ImageCardContainer = styled(Link)<Props>`
   border: 2px solid;
   border-radius: 4px;
   text-decoration: none;

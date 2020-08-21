@@ -37,7 +37,7 @@ const FavoriteCategories: React.FC = () => (
     <p>Algumas categorias mais procuradas.</p>
     <Content>
       {data.map((category) => (
-        <Item>
+        <Item key={category.title}>
           <ImageContainer>
             <img src={category.img} alt="Desenvolvimento" />
           </ImageContainer>

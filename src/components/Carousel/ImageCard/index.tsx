@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { ImageCardContainer } from './styles';
+import { ImageCardContainer } from "./styles";
 
-const ImageCard: React.FC = () => {
-  return (
-    <ImageCardContainer url="https://i.pinimg.com/originals/ca/76/0b/ca760b70976b52578da88e06973af542.jpg" />
-  );
+interface ImageCardProps {
+  imageId: number,
+  imageUrl: string
 }
+
+const ImageCard: React.FC<ImageCardProps> = ({ imageId, imageUrl }) => {
+  return (
+      <ImageCardContainer url={imageUrl} to={`/event/${imageId}`} />
+  );
+};
 
 export default ImageCard;

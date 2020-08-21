@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
+  z-index: 20;
 
   @media (max-width: 61.25em) {
     display: none;
@@ -34,9 +35,18 @@ export const Title = styled(Link)`
   color: var(--third-color);
   font-size: 1.8rem;
   text-decoration: none;
+
+  :hover {
+    opacity: 0.8;  
+  }
 `;
+
 export const Subtitle = styled(Link)`
   color: var(--secondary-color);
   font-size: 1.5rem;
   text-decoration: none;
+
+  :hover {
+    opacity: 0.8;  
+  }
 `;

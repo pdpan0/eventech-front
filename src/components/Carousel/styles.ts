@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 56rem;
+  width: 50rem;
   height: 50rem;
   padding: 5%;
 
-  @media (max-width: 30em) {
-    width: 40rem;
+  .slick-slide {
+    visibility: hidden;
+  }
+  .slick-slide.slick-active {
+    visibility: visible;
   }
 
   .slides {
@@ -16,5 +19,9 @@ export const Container = styled.div`
     &:focus {
       opacity: 0.5;
     }
+  }
+  
+  @media (max-width: 30em) {
+    width: 40rem;
   }
 `;
