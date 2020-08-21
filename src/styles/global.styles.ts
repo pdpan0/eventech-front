@@ -62,7 +62,6 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.4;
-    overflow-x: hidden;
   }
 
   img {
